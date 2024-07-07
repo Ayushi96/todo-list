@@ -1,0 +1,16 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+#table-heading {
+  margin: 2px;
+}
+.display-area {
+    display: flex;
+}
+
+.table {
+    flex-grow: 1;
+    justify-content: center;
+}

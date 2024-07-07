@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="index.css" />
+    <title>ToDo List</title>
+  </head>
+  <body>
+    <h1>TODO App</h1>
+    <div class="input-container">
+      <input type="text" placeholder="Enter TODO here" id="todo-item" />
+      <input type="date" id="deadline" />
+      <button class="add-button" onclick="addTodoItem()">Add</button>
+    </div>
+    <div class="display-area">
+      <table class="table">
+        <tr>
+          <th id="table-heading">To Do</th>
+          <th>Deadline</th>
+          <th>Action</th>
+        </tr>
+      </table>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
