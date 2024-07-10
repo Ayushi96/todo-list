@@ -2,24 +2,37 @@
 <html lang="en">
   <head>
     <link rel="stylesheet" href="index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playwrite+HR:wght@100..400&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
     <title>ToDo List</title>
   </head>
-  <body>
+  <body class="ubuntu-light">
     <h1>TODO App</h1>
-    <div class="input-container">
-      <input type="text" placeholder="Enter TODO here" id="todo-item" />
-      <input type="date" id="deadline" />
-      <button class="add-button" onclick="addTodoItem()">Add</button>
+    <br />
+    <div class="calendar">
+      <div class="current-date">Date 📅</div>
+      <!-- <div class="current-month">Mon</div> -->
     </div>
-    <div class="display-area">
-      <table class="table">
-        <tr>
-          <th id="table-heading">To Do</th>
-          <th>Deadline</th>
-          <th>Action</th>
-        </tr>
-      </table>
-    </div>
+
+    <div class="vertical-line"></div>
+    <main class="main-container">
+      <div class="input-container grid-container">
+        <input type="text" placeholder="Enter TODO here" id="todo-item" />
+        <input type="date" id="deadline" />
+        <button class="add-button" onclick="addTodoItem()">Add</button>
+      </div>
+
+      <div class="display-area grid-container">
+        <span class="heading"><b>To Do 🎯</b></span>
+        <span class="heading"> <b>Deadline ⏳</b></span>
+        <span class="heading"><b>Action</b> </span>
+      </div>
+    </main>
+
     <script src="index.js"></script>
   </body>
 </html>

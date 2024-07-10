@@ -2,8 +2,8 @@ let entry = {
   todo_item: "",
   deadline: null,
 };
-let todo_list =  [];
-console.log(todo_list)
+let todo_list = [];
+console.log(todo_list);
 displayItems();
 
 function addTodoItem() {
@@ -15,23 +15,29 @@ function addTodoItem() {
   todo_list.push(entry);
   todoItem.value = "";
   console.log(todo_list);
-//   localStorage.setItem("todo", JSON.stringify(todo_list));
+  //   localStorage.setItem("todo", JSON.stringify(todo_list));
   displayItems();
 }
 
 function displayItems() {
-    console.log(todo_list.length)
-  let table = document.querySelector(".table");
-  let newHtml = ` <tr>
-    <th id="table-heading">To Do</th>
-    <th>Deadline</th>
-  </tr>`;
+  console.log(todo_list.length);
+  let table = document.querySelector(".display-area");
+  let newHtml = `  <span class="heading"><b>To Do 🎯</b></span>
+  <span class="heading"><b> Deadline ⏳</b></span>
+  <span class="heading"><b> Action</b></span>`;
   for (let i = 0; i < todo_list.length; i++) {
-    newHtml += ` <tr>
-        <td>${todo_list[i].todo_item}</td>
-        <td>${todo_list[i].deadline}</td>
-        <td> <button class="delete-button" onclick="todo_list.splice(${i},1); displayItems();">Delete</button></td>
-    </tr>`;
+    newHtml += `
+        <span>${todo_list[i].todo_item}</span>
+        <span>${todo_list[i].deadline}</span>
+        <span> <button class="delete-button" onclick="todo_list.splice(${i},1); displayItems();">Done ✅ </button></td>
+        </span>`;
   }
   table.innerHTML = newHtml;
 }
+let date_today = new Date();
+
+document.querySelector(
+  ".current-date"
+).innerHTML = `Date 📅 <br><b id="date-today"> ${date_today.getDate()}/${
+  date_today.getMonth()
+}/${date_today.getFullYear()} </b>`;
