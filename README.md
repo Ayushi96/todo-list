@@ -1,3 +1,7 @@
+* Added styling to the todo app:
+ ![todo](https://github.com/Ayushi96/todo-list/assets/37593376/4e3e922b-4239-43c7-8e34-9f657196a5d8)
+
+----------------------------------------------------------
 * A vanilla JS application to add or remove items from your todo list.
 * No data persistence on refresh as of now
 
